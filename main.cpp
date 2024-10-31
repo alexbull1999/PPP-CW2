@@ -15,9 +15,9 @@ int main() {
 	Time timeZero(0, 0, 0);
 	TrafficLight::setTheTime(timeZero);					// event (a) completed
 
-
 	/* (b) create a pair of traffic lights with delays 15 minutes and 5
 	       minutes respectively:                                          */
+
 	cout << "\nA pair T1 and T2 of (slow) collaborating lights is set up:\n";
 	char T1Name[] = "T1 (North South)";
 	char T2Name[] = "T2 (East West)";
@@ -27,15 +27,25 @@ int main() {
 	TrafficLight LightT2(delayT2, T2Name, LightT1);		// event (b) completed
 
 
+	/* Checks that TrafficLight construction and << overloading 
+	 * were functioning correctly -- no longer needed
+	TrafficLight* lightPtr1 = &LightT1;
+	TrafficLight* lightPtr2 = &LightT2;
+	cout << lightPtr1;
+	cout << lightPtr2;
+	LightT1.displayPairStatus();
+	LightT2.displayPairStatus(); */
+
 	/* (c)-(f) begin the simulation with 4 car crossings: */
+
 	LightT1.carWantsToCross();							// event (c) completed
 	LightT2.carWantsToCross();							// event (d) completed
 	LightT1.carWantsToCross();							// event (e) completed
 	LightT2.carWantsToCross();							// event (f) completed
 
-
 	/* (g) create another pair of traffic lights with extra long delays of
 	 6hrs, 15mins, 44secs and 14hrs, 5mins, 57secs respectively:          */
+
 	cout << "\nA new pair T3 and T4 of (very slow!) collaborating lights is now set up:\n";
 	char T3Name[] = "T3 (North South)";
 	char T4Name[] = "T4 (East West)";
@@ -44,8 +54,8 @@ int main() {
 	TrafficLight LightT3(delayT3, T3Name);
 	TrafficLight LightT4(delayT4, T4Name, LightT3);		// event (g) completed
 
-
 	/* (h)-(m) continue the simulation with 6 more car crossings: */
+
 	LightT3.carWantsToCross();							// event (h) completed
 	LightT3.carWantsToCross();							// event (i) completed
 	LightT4.carWantsToCross();							// event (j) completed
