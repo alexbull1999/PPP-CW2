@@ -1,7 +1,7 @@
 /* main.cpp - for MSc Computing C++ Assessed Exercise 2. */
 
 #include <iostream>
-#include "trafficLight.h"
+#include "trafficLight_vString.h"
 #include "time.h"
 
 using namespace std;

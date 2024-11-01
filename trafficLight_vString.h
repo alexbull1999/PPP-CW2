@@ -9,7 +9,7 @@
 
 /* The class TrafficLight represents instances of the traffic lights in 
  * SleepyTown. Each traffic light has four attributes:
- * - lightColor: an enum representing the three possible color options
+ * - lightColor: a string representing the color of the traffic light
  * - lightDelay: an int representing the time for the light to change color
  * - lightName: a pointer to a char array holding the name of the light
  * - lightPair: a pointer to the Traffic Light the light is paired with
@@ -17,13 +17,6 @@
  * than to each individual instance which is:
  * - sleepyTownClock: an instance of the Time class, which keeps track
  * of the overall time in SleepyTown.  */
-
-/*enum declaration, and signalling that we will overload the <<,
- * --, and ++ operators for the enum */
-enum Color {RED, YELLOW, GREEN};
-std::ostream& operator << (std::ostream&, Color&);
-Color& operator -- (Color& color);
-Color& operator ++ (Color& color);
 
 class TrafficLight {
 
@@ -85,7 +78,7 @@ class TrafficLight {
 
 		Time lightDelay;
 		char* lightName;
-		Color lightColor;
+		std::string lightColor;
 		TrafficLight* lightPair;
 
 		static Time sleepyTownClock;

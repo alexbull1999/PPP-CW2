@@ -1,0 +1,16 @@
+traffic_vString: main_vString.o time.o trafficLight_vString.o
+	g++ -g -Wall main_vString.o time.o trafficLight_vString.o -o traffic_vString
+
+main_vString.o: main_vString.cpp time.h trafficLight_vString.h
+	g++ -g -Wall -c main_vString.cpp
+
+time.o: time.cpp time.h
+	g++ -g -Wall -c time.cpp
+
+trafficLight_vString.o: trafficLight_vString.cpp trafficLight_vString.h time.h
+	g++ -g -Wall -c trafficLight_vString.cpp
+
+clean:
+	rm -f *.o execute
+
+
