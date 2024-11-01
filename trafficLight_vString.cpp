@@ -53,7 +53,7 @@ void TrafficLight::setTheTime(Time& timeUpdate)
 void TrafficLight::carWantsToCross()
 {
 	cout << "\n";
-	cout << "*** at " << sleepyTownClock << " a car wants to cross light " <<
+	cout << "***  at " << sleepyTownClock << " a car wants to cross light " <<
 		this->lightName << ", with colour: " << this->lightColor << endl;
 
 	//we need to loop through until the light the car is at has turned green
@@ -71,7 +71,7 @@ void TrafficLight::requestColorChange(TrafficLight* lightPair)
 	{
 		lightPair->lightColor = "yellow";
 		setTheTime(lightPair->lightDelay); 
-		cout << "    at " << sleepyTownClock << " " << lightPair;
+		cout << "     at " << sleepyTownClock << " " << lightPair;
 		return;
 	}
 
@@ -79,7 +79,7 @@ void TrafficLight::requestColorChange(TrafficLight* lightPair)
 	{
 		lightPair->lightColor = "red";
 		setTheTime(lightPair->lightDelay);
-		cout << "    at " << sleepyTownClock << " " << lightPair;
+		cout << "     at " << sleepyTownClock << " " << lightPair;
 		return;
 	}
 }
