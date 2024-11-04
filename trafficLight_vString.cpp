@@ -99,7 +99,7 @@ void TrafficLight::changeColor(TrafficLight* tLight)
 	{
 		tLight->lightColor = "green";
 		setTheTime(tLight->lightDelay);
-		cout << "    at " << sleepyTownClock << " " << tLight;
+		cout << "     at " << sleepyTownClock << " " << tLight;
 		return;
 	}
 }
