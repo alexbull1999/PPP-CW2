@@ -3,21 +3,11 @@
 
 using namespace std;
 
-Time::Time() // default constructor
-{
-	theHour = 0;
-	theMins = 0;
-	theSecs = 0;	
-}
-
+Time::Time() : theHour(0), theMins(0), theSecs(0) {} // default constructor
 
 // time constructor with parameters to assign to attributes
-Time::Time(int hours, int mins, int secs)
-{
-	theHour = hours;
-	theMins = mins;
-	theSecs = secs;
-}
+Time::Time(int hours, int mins, int secs) : theHour(hours), theMins(mins),
+	theSecs(secs) {}
 
 //define add function to calculate new time
 void Time::add(Time& anotherTime)

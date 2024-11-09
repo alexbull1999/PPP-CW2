@@ -12,7 +12,7 @@ using namespace std;
 Time TrafficLight::sleepyTownClock; 
 
 /* Constructing an instance of TrafficLight with 2 parameters.
- * lightColor is always initialised to start as "red".
+ * lightColor is by default  initialised to "red".
  * Lights constructed with 2 parameters don't yet have a light to pair; as the
  * second light is yet to be created; hence set lightPair to null */
 

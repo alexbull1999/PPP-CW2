@@ -19,10 +19,8 @@ class Time {
 
 	public:
 
-		Time(); // default constructor declaration, to allow TrafficLight 
-						// class to take unassigned instances of time
-
-		Time(int hours, int mins, int secs);
+		Time(); // default constructor declaration
+		Time(int hours, int mins, int secs); //constructor with parameters for h,m,s
 		
 		/* A function that adds two values of time together and in doing so updates
 		 * the value of the object calling the method to the result of the sum. 

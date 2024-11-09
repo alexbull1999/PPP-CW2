@@ -33,12 +33,10 @@ class TrafficLight {
 		TrafficLight(Time, char*, TrafficLight&); 
 
 		/* carWantsToCross is a method to signal that a car has arrived at the
-		 * traffic light instance calls the method. 
-		 * As a result, the carWantsToCross method, calls helper method
-		 * requestColorChange to request its partner traffic light to change color
-		 * from green to red.
-		 * It also calls helper method changeColor, to change its own color
-		 * from red to green.
+		 * traffic light instance that calls the method. 
+		 * As a result, the helper method requestColorChange is called to request 
+		 * the partner traffic light to change color from green to red.
+		 * The helper method changeColor, to change its own color from red to green.
 		 * Each change of traffic light color takes a given time, and so the helper
 		 * function setTheTime is also called to update the SleepyTown clock */
 		void carWantsToCross();
