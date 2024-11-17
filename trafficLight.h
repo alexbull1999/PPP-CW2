@@ -29,8 +29,8 @@ class TrafficLight {
 
 	public:
 	
-		TrafficLight(Time, char*);
-		TrafficLight(Time, char*, TrafficLight&); 
+		TrafficLight(Time, char*); //constructor for TrafficLight with 2 parameters
+		TrafficLight(Time, char*, TrafficLight&); //constructor with 3 parameters
 
 		/* carWantsToCross is a method to signal that a car has arrived at the
 		 * traffic light instance that calls the method. 

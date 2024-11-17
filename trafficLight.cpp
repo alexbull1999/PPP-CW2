@@ -1,13 +1,10 @@
 #include "time.h"
 #include "trafficLight.h"
 #include <iostream>
-#include <cstring>
 											
 using namespace std;
 
-/* Need to initialise the static attribute sleepyTownClock from TrafficLight
- * class straightaway, before it is called in any function, otherwise an
- * error will occur */
+/* Initialising the static attribute sleepyTownClock from TrafficLight class */
 
 Time TrafficLight::sleepyTownClock; 
 
